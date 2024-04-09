@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MessengerUI.Pages.Auth"
+             xmlns:strings="clr-namespace:MessengerUI.Resources"
+             Title="Auth">
+
+    <ScrollView>
+        <Grid
+            ColumnDefinitions="*,*"
+            RowDefinitions="*,*,*,*"
+            RowSpacing="20" ColumnSpacing="20"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Label
+                Grid.Column="0" Grid.Row="0"
+                Grid.ColumnSpan="2" Grid.RowSpan="1"
+                Text="{x:Static strings:AppResources.Welcome}"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="EmailLabel"
+                Grid.Column="0" Grid.Row="1"
+                Grid.ColumnSpan="1" Grid.RowSpan="1"
+                Text="{x:Static strings:AppResources.EnterEmail}"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill" />
+            <Entry
+                x:Name="EmailEntry"
+                Grid.Column="1" Grid.Row="1"
+                Grid.ColumnSpan="1" Grid.RowSpan="1"
+                Placeholder="{x:Static strings:AppResources.ExampleEmail}"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill" />
+            
+            <Label
+                x:Name="PasswordLabel"
+                Grid.Column="0" Grid.Row="2"
+                Grid.ColumnSpan="1" Grid.RowSpan="1"
+                Text="{x:Static strings:AppResources.EnterPassword}"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill" />
+            <Entry
+                x:Name="PasswordEntry"
+                Grid.Column="1" Grid.Row="2"
+                Grid.ColumnSpan="1" Grid.RowSpan="1"
+                Placeholder="{x:Static strings:AppResources.ExamplePassword}"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="SignUpButton"
+                Grid.Column="0" Grid.Row="3"
+                Grid.ColumnSpan="1" Grid.RowSpan="1"
+                Text="{x:Static strings:AppResources.SignUp}"
+                Padding="50,0,50,0"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="SingInButton"
+                Grid.Column="1" Grid.Row="3"
+                Grid.ColumnSpan="1" Grid.RowSpan="1"
+                Text="{x:Static strings:AppResources.SignIn}"
+                Padding="50,0,50,0"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
